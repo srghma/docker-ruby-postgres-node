@@ -1,5 +1,7 @@
 FROM ruby:2.3-stretch
 
+MAINTAINER Sergey Homa srghma@gmail.com
+
 ENV LANG C.UTF-8
 
 RUN apt-get update -y; \
@@ -140,5 +142,3 @@ RUN set -ex; \
     rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; \
   fi
 # ############ POSTGRES ############
-
-WORKDIR /app
