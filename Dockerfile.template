@@ -1,4 +1,4 @@
-FROM ruby:2.3-stretch
+FROM ruby:%%RUBY_VERSION%%-stretch
 
 MAINTAINER Sergey Homa srghma@gmail.com
 
