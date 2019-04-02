@@ -11,7 +11,9 @@ sed -e 's/%%RUBY_VERSION%%/'"$RUBY_VERSION"'/g;' \
 
 # cat $temp_file
 
-docker build --pull -t $DOCKER_ID_USER/$DOCKER_IMAGE_NAME:latest -f $temp_file .
+VERSION=v0.1
+docker build -t $DOCKER_ID_USER/$DOCKER_IMAGE_NAME:latest -t $DOCKER_ID_USER/$DOCKER_IMAGE_NAME:$VERSION -f $temp_file --pull .
+docker push $DOCKER_ID_USER/$DOCKER_IMAGE_NAME:$VERSION
 docker push $DOCKER_ID_USER/$DOCKER_IMAGE_NAME:latest
 
 rm $temp_file
