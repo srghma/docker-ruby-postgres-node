@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -euxo pipefail
+
 echo "Building image $DOCKER_ID_USER/$DOCKER_IMAGE_NAME"
 
 echo "RUBY_VERSION=$RUBY_VERSION"

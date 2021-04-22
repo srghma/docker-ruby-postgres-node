@@ -15,4 +15,10 @@ docker_build_and_upload24:
 		RUBY_VERSION='2.4' \
 		./build.sh
 
+docker_build_and_upload30:
+	DOCKER_ID_USER=$(DOCKER_ID_USER) \
+		DOCKER_IMAGE_NAME="buster-ruby3-postgres10-node10" \
+		RUBY_VERSION='3.0' \
+		./build.sh
+
 docker_build_and_upload: docker_build_and_upload23 docker_build_and_upload24
