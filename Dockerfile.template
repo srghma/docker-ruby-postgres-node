@@ -12,7 +12,7 @@ RUN apt-get update -y; \
 ############ NODEJS ############
 # stolen from here https://github.com/nodejs/docker-node/blob/main/16/stretch/Dockerfile
 
-ENV NODE_VERSION 16.0.0
+ENV NODE_VERSION 12.22.1
 
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
   && case "${dpkgArch##*-}" in \
