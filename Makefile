@@ -17,6 +17,12 @@ DOCKER_ID_USER := "srghma"
 
 docker_build_and_upload263:
 	DOCKER_ID_USER=$(DOCKER_ID_USER) \
+		DOCKER_IMAGE_NAME="buster-ruby263-postgres13-node16" \
+		RUBY_VERSION='2.6.3' \
+		./build.sh
+
+docker_build_and_upload273:
+	DOCKER_ID_USER=$(DOCKER_ID_USER) \
 		DOCKER_IMAGE_NAME="buster-ruby273-postgres13-node16" \
 		RUBY_VERSION='2.7.3' \
 		./build.sh
