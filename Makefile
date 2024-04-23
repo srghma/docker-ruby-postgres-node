@@ -10,7 +10,7 @@ DOCKER_ID_USER := "srghma"
 
 docker_build_and_upload27:
 	DOCKER_ID_USER=$(DOCKER_ID_USER) \
-		DOCKER_IMAGE_NAME="bullseye-ruby27-postgres16-node20" \
+		DOCKER_IMAGE_NAME="bullseye-ruby27-postgres16-node18" \
 		RUBY_VERSION="2-bullseye" \
 		./build.sh
 
