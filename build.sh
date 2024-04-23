@@ -4,13 +4,14 @@ set -euxo pipefail
 
 echo "Building image $DOCKER_ID_USER/$DOCKER_IMAGE_NAME"
 
-# echo "RUBY_VERSION=$RUBY_VERSION"
+echo "RUBY_VERSION=$RUBY_VERSION"
 
-temp_file=$(mktemp)
+# temp_file=$(mktemp)
 
-# sed -e 's/%%RUBY_VERSION%%/'"$RUBY_VERSION"'/g;' Dockerfile.template >> $temp_file
+sed -e 's/%%RUBY_VERSION%%/'"$RUBY_VERSION"'/g;' \
+  Dockerfile.template >> ./Dockerfile
 
-cat Dockerfile.template >> $temp_file
+# does this fix caching?
 
 # cat $temp_file
 
