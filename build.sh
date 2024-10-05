@@ -9,8 +9,7 @@ echo "RUBY_VERSION=$RUBY_VERSION"
 # temp_file=$(mktemp)
 temp_file=./Dockerfile
 
-sed -e 's/%%RUBY_VERSION%%/'"$RUBY_VERSION"'/g;' \
-  Dockerfile.template > $temp_file
+sed -e 's/%%RUBY_VERSION%%/'"$RUBY_VERSION"'/g;' Dockerfile.template > $temp_file
 
 # does this fix caching?
 
