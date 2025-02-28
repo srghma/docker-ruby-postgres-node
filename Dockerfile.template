@@ -1,4 +1,4 @@
-FROM ruby:%%RUBY_VERSION%%
+FROM ruby:%%RUBY_VERSION%%-bullseye
 
 MAINTAINER Sergey Homa srghma@gmail.com
 
@@ -57,6 +57,8 @@ RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
   # smoke tests
   && node --version \
   && npm --version
+
+ENV YARN_VERSION 1.22.19
 
 ENV YARN_VERSION 1.22.19
 
